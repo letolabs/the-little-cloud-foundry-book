@@ -41,9 +41,17 @@ The latest source of this book is available at:
 
 ## Introduction
 
- > stuff
+ > Graecum est; non legitur -- "It's Greek to me"
 
-and thangs.
+What is a platform-as-a-service (PAAS)?
+
+## Features
+
+Current languages supported: Ruby, Java, NodeJS, PHP
+
+Frameworks supported: Rails, Spring, etc..
+
+Python and Perl supported in forks but not yet upstreamed.
 
 ## Glosssary
 
@@ -52,3 +60,15 @@ and thangs.
 ## History of Cloud Foundry
 
 ## Case Studies
+
+### ql.io
+
+node.js grumbles
+
+### IRC interview #1
+
+???
+
+### NTT
+
+Contributed memcached pull request on Github, has large internal CF cloud.

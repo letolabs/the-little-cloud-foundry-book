@@ -11,6 +11,10 @@ Jonathan "Duke" Leto
 
 Inspired by ["The Little MongoDB Book"](https://github.com/karlseguin/the-little-mongodb-book) by Karl Seguin.
 
+# Copyright
+
+Leto Labs LLC, 2012
+
 # License
 
 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/legalcode">
