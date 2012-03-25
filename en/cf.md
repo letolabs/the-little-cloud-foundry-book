@@ -69,6 +69,10 @@ Python and Perl supported in forks but not yet upstreamed.
 
 ## Glosssary
 
+### ACM
+
+### caldecott
+
 ### cloud controller
 
 ### Chef
@@ -78,6 +82,8 @@ Python and Perl supported in forks but not yet upstreamed.
 ### dev-ops
 
 ### droplet
+
+### Gerrit
 
 ### IAAS
 
@@ -93,6 +99,8 @@ Python and Perl supported in forks but not yet upstreamed.
 
 ### Ubuntu LTS
 
+### UUA
+
 Long-term supported releases of Ubuntu are supported for 2 years by Canonical.
 
 ### vmc
@@ -100,6 +108,8 @@ Long-term supported releases of Ubuntu are supported for 2 years by Canonical.
 ### warden
 
 ## Community
+
+How to get involved.
 
 ## History of Cloud Foundry
 
