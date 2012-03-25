@@ -43,7 +43,21 @@ The latest source of this book is available at:
 
  > Graecum est; non legitur -- "It's Greek to me"
 
-What is a platform-as-a-service (PAAS)?
+### What is a Platform-As-A-Service (PAAS)?
+
+A PAAS is middleware between the low-level infrastructure (i.e. the actual
+CPUs, hard-drives, RAM, etc) and the high-level applications that run on top
+of the platform. The boundary between the platform and the application is
+clear, but the boundary between the infrastructure and the platform is
+still in flux and in active development.
+
+## Whiat is Cloud Foundry
+
+Cloud Foundry consists of a large amount of Ruby code along with a small amount
+of C and Shell scripts that run on top of Ubuntu LTS. The C code is used to 
+manage Linux containers at the kernel level using a similar strategy as the
+Linux kernel user space program "lxc". CF also consists of many configuration
+files in YAML format.
 
 ## Features
 
