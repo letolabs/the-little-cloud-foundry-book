@@ -69,6 +69,36 @@ Python and Perl supported in forks but not yet upstreamed.
 
 ## Glosssary
 
+### cloud controller
+
+### Chef
+
+### DEA
+
+### dev-ops
+
+### droplet
+
+### IAAS
+
+### health
+
+### health manager
+
+### lxc
+
+### PAAS
+
+### stager
+
+### Ubuntu LTS
+
+Long-term supported releases of Ubuntu are supported for 2 years by Canonical.
+
+### vmc
+
+### warden
+
 ## Community
 
 ## History of Cloud Foundry
