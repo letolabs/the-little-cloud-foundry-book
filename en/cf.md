@@ -51,7 +51,7 @@ of the platform. The boundary between the platform and the application is
 clear, but the boundary between the infrastructure and the platform is
 still in flux and in active development.
 
-## Whiat is Cloud Foundry
+## What is Cloud Foundry?
 
 Cloud Foundry consists of a large amount of Ruby code along with a small amount
 of C and Shell scripts that run on top of Ubuntu LTS. The C code is used to 
@@ -109,7 +109,19 @@ Long-term supported releases of Ubuntu are supported for 2 years by Canonical.
 
 ## Community
 
-How to get involved.
+How does one get involved with Cloud Foundry? That is currently unclear. The
+community is eagerly awaiting a public Gerrit instance so that developers at
+VMware can work in the open along with outside developers. Many Github pull
+requests have been submitted, but most have not been dealt with. This is
+partly explained by the fact that it was VMware's practice to sync to their
+public Github mirror roughly monthly which greatly increases the likelihood
+of merge conflicts.
+
+Public gerrit, waiting until...
+
+TODO: Insert community diagram.
+
+There is an "unofficial" cloudfoundry IRC channel on Freenode at #cloudfoundry.
 
 ## History of Cloud Foundry
 
@@ -126,3 +138,9 @@ node.js grumbles
 ### NTT
 
 Contributed memcached pull request on Github, has large internal CF cloud.
+
+## Links
+
+http://cloudfoundry.org
+
+https://github.com/cloudfoundry
