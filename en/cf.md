@@ -79,47 +79,87 @@ Python and Perl supported in forks but not yet upstreamed.
 
 ### DEA
 
-### dev-ops
+Droplet Execution Agent.
+
+### devops
+
+The boundary layer between development and operations is referred to as "devops".
 
 ### droplet
 
+An application, along with all dependencies, in a compressed archive file.
+
 ### Gerrit
+
+A code review tool based on Git. Gerrit was originally written for the Android
+Open Source Project and allows many kinds of complex requirements and business
+rules to be taken into account when reviewing code.
 
 ### IAAS
 
+Infrastructure-as-a-service. This is the layer below Platform-as-a-service. An example
+is Amazon EC2, which takes care of the "infrastructure" of the actual physical
+hardware.
+
 ### health
+
+Applications can exhibit different states of "health" which include:
+
+- healthy
+- stopped
+- flapping
+- restarting
 
 ### health manager
 
+The subsystem of CF which monitors the health of applications and classifies
+them into a certain number of "states", such as "healthy" or "stopped".
+
 ### lxc
 
+Linux containers.
+
 ### PAAS
+
+Platform-as-a-service. Examples of this are Cloud Foundry, OpenShift, Rackspace,
+Google App Engine and many more.
 
 ### stager
 
 ### Ubuntu LTS
 
+Long-term supported releases of Ubuntu are supported for 2 years by Canonical.
+
 ### UUA
 
-Long-term supported releases of Ubuntu are supported for 2 years by Canonical.
 
 ### vmc
 
+Stands for "VMware Cloud" or "VMware controller" or whatever you want it to mean,
+really. It is a ruby gem which is the command-line client to endpoints which
+implement the Cloud Foundry API.
+
 ### warden
+
+Warden is the security subsystem. It manages Linux containers, including their
+creation, destruction and monitoring. It can be thought of as a delicious layer
+of Ruby on top of klxc.
 
 ## Community
 
 How does one get involved with Cloud Foundry? That is currently unclear. The
 community is eagerly awaiting a public Gerrit instance so that developers at
 VMware can work in the open along with outside developers. Many Github pull
-requests have been submitted, but most have not been dealt with. This is
-partly explained by the fact that it was VMware's practice to sync to their
-public Github mirror roughly monthly which greatly increases the likelihood
-of merge conflicts.
+requests have been submitted, but most have not been dealt with. This is partly
+explained by the fact that it was VMware's practice to sync to their public
+Github mirror roughly monthly which greatly increases the likelihood of merge
+conflicts.
 
-Public gerrit, waiting until...
+A public Gerrit instance is in the works. This will allow internal VMware CF
+developers and external CF developers to work together, in publice, which is a
+huge step in the right direction for VMware.
 
-TODO: Insert community diagram.
+![CF Community Process](title.png)
 
 There is an "unofficial" cloudfoundry IRC channel on Freenode at #cloudfoundry.
 
