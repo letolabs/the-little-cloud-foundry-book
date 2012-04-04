@@ -117,7 +117,10 @@ them into a certain number of "states", such as "healthy" or "stopped".
 
 ### lxc
 
-Linux containers.
+Linux "containers" which are similar to FreeBSD "jails". They allow many
+"virtual" instances of Linux to run inside of a "host" Linux, which is
+actually running on hardware. These have been available in the mainline
+Linux kernel since 2.6.29.
 
 ### PAAS
 
