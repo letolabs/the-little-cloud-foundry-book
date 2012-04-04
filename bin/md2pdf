@@ -12,7 +12,7 @@ columns=onecolumn
 geometry=portrait
 nohyphenation=true
 
-markdown2pdf --xetex --template=template/xetex.template \
+pandoc --latex-engine=xelatex --template=template/xetex.template \
 -V paper=$paper -V hmargin=$hmargin -V vmargin=$vmargin \
 -V mainfont="$mainfont" -V sansfont="$sansfont" -V monofont="$monofont" \
 -V geometry=$geometry -V columns=$columns -V fontsize=$fontsize \
