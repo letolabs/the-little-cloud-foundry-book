@@ -3,6 +3,10 @@
 A short yet informative introduction to Cloud Foundry, an open source
 polyglot Platform-as-a-service that is Apache 2.0 licensed.
 
+# Translations
+
+Would you like to translate this book into your native tongue? Please contact duke@leto.net !
+
 # Building
 
 You want to build the PDF from scratch? You will need a recent pandoc (1.9) and a few deps.
