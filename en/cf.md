@@ -71,15 +71,28 @@ Python and Perl supported in forks but not yet upstreamed.
 
 ### ACM
 
+Access Control Manager. A general system for implementing access control
+features for applications.
+
 ### caldecott
 
+A Ruby gem which allows you to "tunnel" into the various services attached
+to your application. As an example, you can use caldecott to connect to
+the mysql command-line of your application running in the cloud with a
+command similar to
+
+    vmc tunnel mysql-12345
+
 ### cloud controller
+
+The Cloud Controller can be thought of as the maestro or orchestrator. It
+also includes the endpoints which vmc communicates with.
 
 ### Chef
 
 ### DEA
 
-Droplet Execution Agent.
+Droplet Execution Agent. A process which manages the running application instances.
 
 ### devops
 
@@ -129,12 +142,17 @@ Google App Engine and many more.
 
 ### stager
 
+The stager takes an application, which is often a directory of files on disk, and
+turns it into a package that can be deployed to an application instance as part
+of an update or initial deploy.
+
 ### Ubuntu LTS
 
 Long-term supported releases of Ubuntu are supported for 2 years by Canonical.
 
-### UUA
+### UAA
 
+User Account and Authentication
 
 ### vmc
 
