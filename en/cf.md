@@ -147,6 +147,11 @@ checksums.
 Platform-as-a-service. Examples of this are Cloud Foundry, OpenShift, Rackspace,
 Google App Engine and many more.
 
+### router
+
+The Router takes HTTP requests and sends them to the appropriate running
+application instance.  It usually sits behind one or more load balancers.
+
 ### stager
 
 The stager takes an application, which is often a directory of files on disk, and
@@ -160,6 +165,11 @@ Long-term supported releases of Ubuntu are supported for 2 years by Canonical.
 ### UAA
 
 User Account and Authentication
+
+### vcap
+
+VMware's Cloud Application Platform. This is the central Git repository which
+contains the Cloud Foundry codebase.
 
 ### vmc
 
