@@ -108,11 +108,6 @@ A code review tool based on Git. Gerrit was originally written for the Android
 Open Source Project and allows many kinds of complex requirements and business
 rules to be taken into account when reviewing code.
 
-### IAAS
-
-Infrastructure-as-a-service. This is the layer below Platform-as-a-service. An example
-is Amazon EC2, which takes care of the "infrastructure" of the actual physical
-hardware.
 
 ### health
 
@@ -128,12 +123,24 @@ Applications can exhibit different states of "health" which include:
 The subsystem of CF which monitors the health of applications and classifies
 them into a certain number of "states", such as "healthy" or "stopped".
 
+### IAAS
+
+Infrastructure-as-a-service. This is the layer below Platform-as-a-service. An example
+is Amazon EC2, which takes care of the "infrastructure" of the actual physical
+hardware.
+
 ### lxc
 
 Linux "containers" which are similar to FreeBSD "jails". They allow many
 "virtual" instances of Linux to run inside of a "host" Linux, which is
 actually running on hardware. These have been available in the mainline
 Linux kernel since 2.6.29.
+
+### manifest
+
+A Manifest is a YAML configuration file which lists various properties and
+metadata about the application, such as endpoint URLs, package versions and
+checksums.
 
 ### PAAS
 
@@ -205,3 +212,5 @@ Contributed memcached pull request on Github, has large internal CF cloud.
 http://cloudfoundry.org
 
 https://github.com/cloudfoundry
+
+http://apidocs.cloudfoundry.com
