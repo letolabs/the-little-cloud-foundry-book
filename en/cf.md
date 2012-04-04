@@ -1,6 +1,6 @@
 \thispagestyle{empty}
 \changepage{}{}{}{-1.5cm}{}{2cm}{}{}{}
-![The Little Cloud Foundry Book, By Leto Labs](title.png)\
+![The Little Cloud Foundry Book, By Jonathan "Duke" Leto](title.png)\
 
 \clearpage
 \changepage{}{}{}{1.5cm}{}{-2cm}{}{}{}
