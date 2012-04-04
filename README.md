@@ -3,7 +3,7 @@
 A short yet informative introduction to Cloud Foundry, an open source
 polyglot Platform-as-a-service that is Apache 2.0 licensed.
 
-# Building A PDF
+# Building
 
 You want to build the PDF from scratch? You will need a recent pandoc (1.9) and a few deps.
 
@@ -17,6 +17,11 @@ You should install pandoc with cabal.
     cabal install cabal-install # get the latest cabal
     cabal install json-0.4.4    # get around dependency conflicts
     cabal install pandoc        # install cabal
+
+
+## Build The PDF
+
+    make pdf
 
 # Author
 
