@@ -6,7 +6,8 @@ vmargin=3cm
 fontsize=11pt
 
 mainfont=Verdana
-sansfont=Tahoma
+#sansfont=Tahoma
+sansfont=Verdana
 monofont="Courier New"
 columns=onecolumn
 geometry=portrait
