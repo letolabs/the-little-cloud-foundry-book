@@ -18,6 +18,7 @@ You should install pandoc with cabal.
     cabal install json-0.4.4    # get around dependency conflicts
     cabal install pandoc        # install cabal
 
+More details at http://johnmacfarlane.net/pandoc/installing.html
 
 ## Build The PDF
 
