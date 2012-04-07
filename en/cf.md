@@ -53,6 +53,11 @@ still in flux and in active development.
 
 ## What is Cloud Foundry?
 
+The name "Cloud Foundry" can be used to refer to either the still beta
+commercial VMware product at cloudfoundry.com or the Cloud Foundry Open Source
+Project. In this book, "Cloud Foundry" will always refer to the open source
+project, unless otherwise stated.
+
 Cloud Foundry consists of a large amount of Ruby code along with a small amount
 of C and Shell scripts that run on top of Ubuntu LTS. The C code is used to 
 manage Linux containers at the kernel level using a similar strategy as the
