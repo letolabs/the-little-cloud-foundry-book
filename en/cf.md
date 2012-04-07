@@ -71,6 +71,8 @@ Current languages supported: Ruby, Java, NodeJS, PHP
 Perl support has been added by ActiveState, but has not yet been upstreamed into
 the open source project.
 
+.NET support was added by IronFoundry, but it is currently a fork of Cloud Foundry.
+
 Frameworks supported: Rails, Spring, etc..
 
 Python and Perl supported in forks but not yet upstreamed.
