@@ -1,11 +1,11 @@
 # The Little Cloud Foundry Book
 
 A short yet informative introduction to Cloud Foundry, an open source
-polyglot Platform-as-a-service that is Apache 2.0 licensed.
+polyglot platform-as-a-service.
 
 # Translations
 
-Would you like to translate this book into your native tongue? Please contact duke@leto.net !
+Would you like to translate this book into your mother tongue? Please contact duke@leto.net !
 
 # Building
 
