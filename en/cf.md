@@ -68,6 +68,9 @@ files in YAML format.
 
 Current languages supported: Ruby, Java, NodeJS, PHP
 
+Perl support has been added by ActiveState, but has not yet been upstreamed into
+the open source project.
+
 Frameworks supported: Rails, Spring, etc..
 
 Python and Perl supported in forks but not yet upstreamed.
