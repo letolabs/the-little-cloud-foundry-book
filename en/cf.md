@@ -73,13 +73,14 @@ Supported languages in mainline:
 * Ruby 1.8.x, 1.9.x
 * Java
 * NodeJS 0.4.x, 0.6.x
-* PHP 5
+* PHP 5.3, 5.4 (ActiveState, AppFog, paas.io)
 
 Supported languages in forks:
 
 * Perl 5 (ActiveState)
 * .NET (IronFoundry)
 * .NET (Uhuru)
+* Haskell 2011.4.0 (paas.io)
 
 ## Supported Frameworks
 
@@ -87,6 +88,7 @@ Mainline:
 
 * Rails
 * Sinatra
+* Rack (contributed recently by paas.io)
 * Java Spring
 
 Forks:
