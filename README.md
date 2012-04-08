@@ -13,7 +13,7 @@ You want to build the PDF from scratch? You will need a recent pandoc (1.9) and 
 
 On Debian-ish systems
 
-    sudo apt-get install texlive-metapost texlive-fonts-extra cabal
+    sudo apt-get install texlive-metapost texlive-fonts-extra cabal-install
 
 You should install pandoc with cabal.
 
