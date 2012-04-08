@@ -100,6 +100,8 @@ also includes the endpoints which vmc communicates with.
 
 ### Chef
 
+Chef is an open-source systems integration framework to automate cloud-related tasks.
+
 ### DEA
 
 Droplet Execution Agent. A process which manages the running application instances.
@@ -115,9 +117,12 @@ An application, along with all dependencies, in a compressed archive file.
 ### Gerrit
 
 A code review tool based on Git. Gerrit was originally written for the Android
-Open Source Project and allows many kinds of complex requirements and business
-rules to be taken into account when reviewing code.
+Open Source Project at Google and allows many kinds of complex requirements and
+business rules to be taken into account when reviewing code.
 
+### IAAS
+
+Infrastructure-as-a-service
 
 ### health
 
@@ -219,9 +224,17 @@ There is an "unofficial" cloudfoundry IRC channel on Freenode at #cloudfoundry.
 
 node.js grumbles
 
-### IRC interview #1
+### CF multi-node using AWS
 
-???
+Load Balancer: AWS elastic load balancer
+
+Routers: 2 small instances (1.7 GB of RAM each)
+
+DEA: 2 2xlarge instances (32 GB of RAM each), 1 xlarge instance (15 GB of RAM)
+
+CC/HM/Nats: 1 xlarge instance (15 GB of RAM)
+
+Database: AWS relational database service
 
 ### NTT
 
