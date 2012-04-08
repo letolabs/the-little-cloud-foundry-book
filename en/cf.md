@@ -84,11 +84,13 @@ Supported languages in forks:
 ## Supported Frameworks
 
 Mainline:
+
 * Rails
 * Sinatra
 * Java Spring
 
 Forks:
+
 * Catalyst (ActiveState)
 * Dancer (ActiveState)
 

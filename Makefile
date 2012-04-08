@@ -1,3 +1,6 @@
+view:
+	evince cf.pdf
+
 pandoc:
 	cabal update
 	cabal install cabal-install # get the latest cabal
@@ -12,3 +15,5 @@ epub: en/cf.md
 
 mobi: en/cf.epub
 	kindleGen en/cf.mobi
+
+
