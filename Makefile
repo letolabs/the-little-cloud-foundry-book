@@ -1,3 +1,9 @@
+pandoc:
+	cabal update
+	cabal install cabal-install # get the latest cabal
+	cabal install json-0.4.4    # get around dependency conflicts
+	cabal install pandoc        # install cabal
+	
 pdf: en/cf.md
 	bin/md2pdf
 
