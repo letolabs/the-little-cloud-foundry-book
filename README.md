@@ -15,12 +15,17 @@ On Debian-ish systems
 
     sudo apt-get install texlive-metapost texlive-fonts-extra cabal-install
 
-You should install pandoc with cabal.
+You can install pandoc with:
+
+    make pandoc
+
+which runs the following commands:
 
     cabal update
     cabal install cabal-install # get the latest cabal
     cabal install json-0.4.4    # get around dependency conflicts
-    cabal install pandoc        # install cabal
+    cabal install pandoc        # install pandoc
+
 
 More details at http://johnmacfarlane.net/pandoc/installing.html
 
