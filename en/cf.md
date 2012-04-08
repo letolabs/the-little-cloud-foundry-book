@@ -66,16 +66,31 @@ files in YAML format.
 
 ## Features
 
-Current languages supported: Ruby, Java, NodeJS, PHP
+### Supported Languages
 
-Perl support has been added by ActiveState, but has not yet been upstreamed into
-the open source project.
+Supported languages in mainline:
 
-.NET support was added by IronFoundry, but it is currently a fork of Cloud Foundry.
+* Ruby 1.8.x, 1.9.x
+* Java
+* NodeJS 0.4.x, 0.6.x
+* PHP 5
 
-Frameworks supported: Rails, Spring, etc..
+Supported languages in forks:
 
-Python and Perl supported in forks but not yet upstreamed.
+* Perl 5 (ActiveState)
+* .NET (IronFoundry)
+* .NET (Uhuru)
+
+## Supported Frameworks
+
+Mainline:
+* Rails
+* Sinatra
+* Java Spring
+
+Forks:
+* Catalyst (ActiveState)
+* Dancer (ActiveState)
 
 ## Glosssary
 
