@@ -70,10 +70,11 @@ files in YAML format.
 
 Supported languages in mainline:
 
-* Ruby 1.8.x, 1.9.x
+* Ruby (MRE 1.8.x, MRE 1.9.x, JRuby)
 * Java
 * NodeJS 0.4.x, 0.6.x
 * PHP 5.3, 5.4 (ActiveState, AppFog, paas.io)
+* Erlang
 
 Supported languages in forks:
 
