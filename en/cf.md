@@ -228,9 +228,11 @@ explained by the fact that it was VMware's practice to sync to their public
 Github mirror roughly monthly which greatly increases the likelihood of merge
 conflicts.
 
-A public Gerrit instance is in the works. This will allow internal VMware CF
-developers and external CF developers to work together, in publice, which is a
-huge step in the right direction for VMware.
+A public Gerrit instance was just announced. This will allow internal VMware CF
+developers and external CF developers to work together, in public, which is a
+huge step in the right direction for VMware. http://reviews.cloudfoundry.org
+Developers can sign in with OpenID or a Google Account and participate in the
+development of Cloud Foundry.
 
 ![CF Community Process](title.png)
 
