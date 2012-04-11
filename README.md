@@ -9,7 +9,7 @@ Would you like to translate this book into your native language? Please email du
 
 # Building
 
-You want to build the PDF from scratch? You will need a recent [http://hackage.haskell.org/package/pandoc](pandoc 1.9+) and a few dependencies.
+You want to build the PDF from scratch? You will need a recent [pandoc 1.9+](http://hackage.haskell.org/package/pandoc) and a few dependencies.
 
 On Debian-ish systems
 
