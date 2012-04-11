@@ -1,4 +1,4 @@
-view:
+view: pdf
 	evince cf.pdf
 
 pandoc:
