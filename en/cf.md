@@ -15,8 +15,11 @@ have paid for this book.** Donations are totally fine, though :)
 
 You are basically free to copy, distribute, modify or display the book.
 However, you must attribute the book to Jonathan "Duke" Leto and Leto Labs LLC
-and not use it for commercial purposes. If you would like to use the content
-of this book under a different license feel free to contact duke@leto.net .
+and not use it for commercial purposes. 
+
+To be clear: if you want to read this book to make you better at doing your job, wonderful.
+If you would like to use the content of this book in your training program, etc., let's talk. 
+Contact duke@leto.net
 
 You can see the full text of the license at:
 
@@ -43,13 +46,20 @@ The latest source of this book is available at:
 
  > Graecum est; non legitur -- "It's Greek to me"
 
-### What is a Platform-As-A-Service (PAAS)?
+### What is a Platform-As-A-Service (PaaS)?
 
-A PAAS is middleware between the low-level infrastructure (i.e. the actual
+A PaaS is middleware between the low-level infrastructure (i.e. the actual
 CPUs, hard-drives, RAM, etc) and the high-level applications that run on top
 of the platform. The boundary between the platform and the application is
 clear, but the boundary between the infrastructure and the platform is
-still in flux and in active development.
+still largely in flux. 
+
+While there are many different definitions of PaaS floating around the market
+currently, there are a few functions that are specifically the task of PaaS:
+ * live deploying web application code 
+ * allocating server resources dynamically
+ * server monitoring 
+ * sending http requests to IaaS servers (this needs work)
 
 ## What is Cloud Foundry?
 
