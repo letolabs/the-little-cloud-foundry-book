@@ -5,11 +5,11 @@ polyglot platform-as-a-service.
 
 # Translations
 
-Would you like to translate this book into your mother tongue? Please contact duke@leto.net !
+Would you like to translate this book into your native language? Please email duke@leto.net.
 
 # Building
 
-You want to build the PDF from scratch? You will need a recent pandoc (1.9) and a few deps.
+You want to build the PDF from scratch? You will need a recent [http://hackage.haskell.org/package/pandoc](pandoc (1.9+)) and a few dependencies.
 
 On Debian-ish systems
 
