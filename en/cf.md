@@ -224,25 +224,26 @@ implement the Cloud Foundry API.
 
 ### warden
 
-Warden is the security subsystem. It manages Linux containers, including their
+[Warden](https://github.com/cloudfoundry/vcap/tree/master/warden) is the security subsystem. It manages Linux containers, including their
 creation, destruction and monitoring. It can be thought of as a delicious layer
-of Ruby on top of klxc.
+of Ruby on top of a bit of C which uses Linux kernel hooks.
 
 ## Community
 
-How does one get involved with Cloud Foundry? That is currently unclear. The
-community is eagerly awaiting a public Gerrit instance so that developers at
-VMware can work in the open along with outside developers. Many Github pull
-requests have been submitted, but most have not been dealt with. This is partly
-explained by the fact that it was VMware's practice to sync to their public
-Github mirror roughly monthly which greatly increases the likelihood of merge
-conflicts.
+Many individuals and companies have contributed to Cloud Foundry to make it
+what it is today. Things that were added by the community include PHP, Rack,
+etc...
 
-A public Gerrit instance was just announced. This will allow internal VMware CF
-developers and external CF developers to work together, in public, which is a
-huge step in the right direction for VMware. http://reviews.cloudfoundry.org
-Developers can sign in with OpenID or a Google Account and participate in the
-development of Cloud Foundry.
+In the past, VMware was overwhelmed with Github pull requests, so some of them
+went seemingly ignored.  This is explained by the fact that it was VMware's
+practice to sync from their private Gerrit repos to their public Github mirror
+roughly monthly which greatly increases the likelihood of merge conflicts.
+
+To the delight of many, a public Gerrit instance was recently announced. This will allow internal
+VMware CF developers and external CF developers to work together, in public,
+which is a huge step in the right direction for VMware.
+http://reviews.cloudfoundry.org Developers can sign in with OpenID or a Google
+Account and participate in the development of Cloud Foundry.
 
 ![CF Community Process](title.png)
 
@@ -256,7 +257,7 @@ There is an "unofficial" cloudfoundry IRC channel on Freenode at #cloudfoundry.
 
 ActiveState Stackato
 
-    wget blah | curl
+    curl get.stackato.com/microcloud | bash
 
 ### MCF
 
