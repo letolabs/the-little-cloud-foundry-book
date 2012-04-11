@@ -224,9 +224,10 @@ implement the Cloud Foundry API.
 
 ### warden
 
-[Warden](https://github.com/cloudfoundry/vcap/tree/master/warden) is the security subsystem. It manages Linux containers, including their
-creation, destruction and monitoring. It can be thought of as a delicious layer
-of Ruby on top of a bit of C which uses Linux kernel hooks.
+[Warden](https://github.com/cloudfoundry/vcap/tree/master/warden) is the
+security subsystem. It manages Linux containers, including their creation,
+destruction and monitoring. It can be thought of as a delicious layer of Ruby
+on top of a bit of C which uses Linux kernel hooks.
 
 ## Community
 
