@@ -238,6 +238,22 @@ development of Cloud Foundry.
 
 There is an "unofficial" cloudfoundry IRC channel on Freenode at #cloudfoundry.
 
+## Deploying your App to Cloud Foundry
+
+## Installing Cloud Foundry
+
+### Simplest
+
+ActiveState Stackato
+
+    wget blah | curl
+
+### MCF
+
+### From Github
+
+    git clone ...
+
 ## History of Cloud Foundry
 
 ## Case Studies
