@@ -209,7 +209,9 @@ Long-term supported releases of Ubuntu are supported for 2 years by Canonical.
 
 ### UAA
 
-User Account and Authentication
+User Account and Authentication. UAA uses OpenID Connect for authentication
+(also known as Single Sign On) and the OAuth2 protocol for granting access to
+resources.
 
 ### vcap
 
