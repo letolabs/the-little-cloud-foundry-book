@@ -35,9 +35,10 @@ You can see the full text of the license at:
 Jonathan "Duke" Leto, Founder
 Leto Labs LLC
 
-### Thanks, Yall
+### Thanks, Y'all
 
 ...
+
 
 ### Latest Version
 
@@ -51,7 +52,7 @@ The latest source of this book is available at:
 
 This book is for three sets of people:
 
- * Application developers wanting to run website or other things *on* Cloud Foundry
+ * Application developers wanting to run code *on* Cloud Foundry
  * Dev-Ops people who want to install, maintain and manage Cloud Foundry instances
  * Developers wanting to contribute, fix bugs and hack on Cloud Foundry itself
 
@@ -136,7 +137,7 @@ Forks:
 * Catalyst (ActiveState)
 * Dancer (ActiveState)
 
-## Glosssary
+## Glossary
 
 ### ACM
 
@@ -165,9 +166,11 @@ Chef is an open-source systems integration framework to automate cloud-related t
 
 Droplet Execution Agent. A process which manages the running application instances.
 
-### devops
+### dev-ops
 
-The boundary layer between development and operations is referred to as "devops".
+The boundary layer between development and operations is referred to as
+"dev-ops". It is characterized by the best practices of operations and
+development coming together, TODO: EXAMPLE.
 
 ### droplet
 
