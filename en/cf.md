@@ -47,6 +47,21 @@ The latest source of this book is available at:
 
 \clearpage
 
+## Who Is This Book For?
+
+This book is for three sets of people:
+
+ * Application developers wanting to run website or other things *on* Cloud Foundry
+ * Dev-Ops people who want to install, maintain and manage Cloud Foundry instances
+ * Developers wanting to contribute, fix bugs and hack on Cloud Foundry itself
+
+If you are an application developer, start from the beginning of this book. If you
+are a dev-ops person who is already familiar with running applications on CF, you
+can skip to the "Installation" chapter.
+
+Developers who are familiar with Cloud Foundry but want to know how to contribute
+can skip to "Hacking on Cloud Foundry".
+
 ## Introduction
 
  > Graecum est; non legitur -- "It's Greek to me"
@@ -57,7 +72,16 @@ A PaaS is middleware between the low-level infrastructure (i.e. the actual
 CPUs, hard-drives, RAM, etc) and the high-level applications that run on top
 of the platform. The boundary between the platform and the application is
 clear, but the boundary between the infrastructure and the platform is
-still largely in flux. 
+still largely in flux.
+
+
+        --------------------------
+        Software-as-a-service
+        --------------------------
+        Platform-as-a-service
+        --------------------------
+        Infrastructure-as-a-service
+        ---------------------------
 
 While there are many different definitions of PaaS floating around the market
 currently, there are a few functions that are specifically the task of PaaS:
