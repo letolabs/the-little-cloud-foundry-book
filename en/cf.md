@@ -306,7 +306,7 @@ takes care of everything, including creating a pristine VM:
 On a 64bit Ubuntu LTS (10.04.2 works well) with at least 1GB RAM
 
     sudo apt-get install openssh-server curl
-    bash < <(curl -s -k -B https://raw.github.com/cloudfoundry/vcap/master/dev_setup/bin/vcap_dev_setup)
+    bash < <(curl -s -k -B http://git.io/vcap_dev_setup)
 
 ## History of Cloud Foundry
 
