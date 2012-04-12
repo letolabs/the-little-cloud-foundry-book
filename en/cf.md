@@ -252,19 +252,27 @@ There is an "unofficial" cloudfoundry IRC channel on Freenode at #cloudfoundry.
 
 ## Deploying your App to Cloud Foundry
 
+If you just want to deploy apps to a Cloud Foundry instance, you just need to install
+a single Ruby gem called "vmc"
+
+    gem install vmc
+
 ## Installing Cloud Foundry
 
 ### Simplest
 
-ActiveState Stackato
+ActiveState Stackato provides the easiest way to get a working Cloud Foundry
+instance running locally. There is a single, simple, beautiful command which
+takes care of everything, including creating a pristine VM:
 
     curl get.stackato.com/microcloud | bash
 
-### MCF
-
 ### From Github
 
-    git clone ...
+On a 64bit Ubuntu LTS (10.04.2 works well) with at least 1GB RAM
+
+    sudo apt-get install openssh-server curl
+    bash < <(curl -s -k -B https://raw.github.com/cloudfoundry/vcap/master/dev_setup/bin/vcap_dev_setup)
 
 ## History of Cloud Foundry
 
