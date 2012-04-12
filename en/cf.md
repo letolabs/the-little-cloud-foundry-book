@@ -349,6 +349,10 @@ Load Balancer: AWS elastic load balancer
 
  * Database: AWS relational database service
 
+ * Languages: Ruby , Node.js
+
+ * Frameworks: Sinatra, Backbone.js
+
 ### NTT
 
 Contributed memcached pull request on Github, has large internal CF cloud.
