@@ -1,6 +1,11 @@
 \thispagestyle{empty}
 \changepage{}{}{}{-1.5cm}{}{2cm}{}{}{}
-![The Little Cloud Foundry Book, By Jonathan "Duke" Leto](title.png)\
+
+# The Little Cloud Foundry Book
+
+![cloud](cloud_small.jpg)\
+
+By Jonathan "Duke" Leto
 
 \clearpage
 \changepage{}{}{}{1.5cm}{}{-2cm}{}{}{}
@@ -248,7 +253,7 @@ which is a huge step in the right direction for VMware.
 http://reviews.cloudfoundry.org Developers can sign in with OpenID or a Google
 Account and participate in the development of Cloud Foundry.
 
-![CF Community Process](title.png)
+![CF Community Process](title_small.png)
 
 There is an "unofficial" cloudfoundry IRC channel on Freenode at #cloudfoundry.
 
