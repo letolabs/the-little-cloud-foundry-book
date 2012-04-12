@@ -307,8 +307,8 @@ Contributed memcached pull request on Github, has large internal CF cloud.
 
 ## Links
 
-http://cloudfoundry.org
+<http://cloudfoundry.org>
 
-https://github.com/cloudfoundry
+<https://github.com/cloudfoundry>
 
-http://apidocs.cloudfoundry.com
+<http://apidocs.cloudfoundry.com>
