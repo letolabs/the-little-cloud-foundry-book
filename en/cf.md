@@ -137,6 +137,22 @@ Forks:
 * Catalyst (ActiveState)
 * Dancer (ActiveState)
 
+### Supported Services
+
+Mainline:
+
+* PostgreSQL
+* MySQL
+* redis
+* neo4j
+* RabbitMQ
+* MongoDB
+* vblob (S3-compatible HTTP endpoint)
+
+Forks:
+
+?
+
 ## Glossary
 
 ### ACM
@@ -186,7 +202,7 @@ business rules to be taken into account when reviewing code.
 
 Applications can exhibit different states of "health" which include:
 
-- healthy
+- running
 - stopped
 - flapping
 - restarting
@@ -281,12 +297,29 @@ Account and participate in the development of Cloud Foundry.
 
 There is an "unofficial" cloudfoundry IRC channel on Freenode at #cloudfoundry.
 
-## Deploying your App to Cloud Foundry
+## Deploying your App to a Cloud Foundry Instance
 
 If you just want to deploy apps to a Cloud Foundry instance, you just need to install
 a single Ruby gem called "vmc"
 
     gem install vmc
+
+At this point you need to decide which Cloud Foundry based service to use. There are
+many. For now, if you want to register a free account at cloudfoundry.com, you can
+do that from the command line:
+
+    vmc register --email your@email.com --passwd password
+
+
+    vmc login    --email your@email.com --passwd password
+    vmc info
+
+## How Do I Choose a Cloud Foundry Provider?
+
+This question depends on:
+
+ * Do you need complete privacy?
+ * Do you want to DIY it or pay somebody else to worry?
 
 ## Installing Cloud Foundry
 
