@@ -276,26 +276,6 @@ destruction and monitoring. It can be thought of as a delicious layer of Ruby
 on top of a bit of C which uses Linux kernel hooks to strictly enforce resource
 limits.
 
-## Community
-
-Many individuals and companies have contributed to Cloud Foundry to make it
-what it is today. Things that were added by the community include PHP, Rack,
-etc...
-
-In the past, VMware was overwhelmed with Github pull requests, so some of them
-went seemingly ignored.  This is explained by the fact that it was VMware's
-practice to sync from their private Gerrit repos to their public Github mirror
-roughly monthly which greatly increases the likelihood of merge conflicts.
-
-To the delight of many, a public Gerrit instance was recently announced. This will allow internal
-VMware CF developers and external CF developers to work together, in public,
-which is a huge step in the right direction for VMware.
-http://reviews.cloudfoundry.org Developers can sign in with OpenID or a Google
-Account and participate in the development of Cloud Foundry.
-
-![CF Community Process](title_small.png)
-
-There is an "unofficial" cloudfoundry IRC channel on Freenode at #cloudfoundry.
 
 ## Deploying your App to a Cloud Foundry Instance
 
@@ -331,6 +311,9 @@ takes care of everything, including creating a pristine VM:
 
     curl get.stackato.com/microcloud | bash
 
+This should pop up a VM running inside virtualbox which has Stackato running!
+You can then connect to the web interface at TODO.
+
 ### From Github
 
 On a 64bit Ubuntu LTS (10.04.2 works well) with at least 1GB RAM
@@ -338,25 +321,67 @@ On a 64bit Ubuntu LTS (10.04.2 works well) with at least 1GB RAM
     sudo apt-get install openssh-server curl
     bash < <(curl -s -k -B http://git.io/vcap_dev_setup)
 
-## History of Cloud Foundry
+### Starting Cloud Foundry
+
+vcap_dev_setup does not actually start your local Cloud Foundry instance, to
+do that:
+
+    ~/cloudfoundry/vcap/dev_setup/bin/vcap_dev start
+
+
+## How To Contribute
+
+Many individuals and companies have contributed to Cloud Foundry to make it
+what it is today. Things that were added by the community include Python, PHP, Rack
+and many other features and services.
+
+In the past, VMware was overwhelmed with Github pull requests, so some of them
+went seemingly ignored.  This is explained by the fact that it was VMware's
+practice to sync from their private Gerrit repositories to their public Github
+mirror roughly monthly which greatly increases the likelihood of merge
+conflicts.
+
+To the delight of many, a public Gerrit instance was recently announced. This will allow internal
+VMware CF developers and external CF developers to work together, in public,
+which is a huge step in the right direction for VMware.
+http://reviews.cloudfoundry.org Developers can sign in with OpenID or a Google
+Account and participate in the development of Cloud Foundry.
+
+![CF Community Process](title_small.png)
+
+To install the Gerrit command-line gem :
+
+    gem install gerrit-cli
+
+You may need sudo if you are installing into your system gem location.
+
+There is a Cloud Foundry IRC channel on Freenode at #cloudfoundry.
 
 ## Case Studies
 
 ### ql.io
 
-node.js grumbles
+TODO: brief breakdown of ql.io being ported to CF
+
 
 ### CF multi-node using AWS
 
+This case study utilizes Cloud Foundry to have a "private cloud" which is needed to keep
+HIPPA compliance in the health care industry.
+
 Load Balancer: AWS elastic load balancer
 
-Routers: 2 small instances (1.7 GB of RAM each)
+ * Routers: 2 small instances (1.7 GB of RAM each)
 
-DEA: 2 2xlarge instances (32 GB of RAM each), 1 xlarge instance (15 GB of RAM)
+ * DEA: 2 2xlarge instances (32 GB of RAM each), 1 xlarge instance (15 GB of RAM)
 
-CC/HM/Nats: 1 xlarge instance (15 GB of RAM)
+ * CC/HM/Nats: 1 xlarge instance (15 GB of RAM)
 
-Database: AWS relational database service
+ * Database: AWS relational database service
+
+ * Languages: Ruby , Node.js
+
+ * Frameworks: Sinatra, Backbone.js
 
 ### NTT
 
