@@ -182,10 +182,6 @@ A code review tool based on Git. Gerrit was originally written for the Android
 Open Source Project at Google and allows many kinds of complex requirements and
 business rules to be taken into account when reviewing code.
 
-### IAAS
-
-Infrastructure-as-a-service
-
 ### health
 
 Applications can exhibit different states of "health" which include:
@@ -261,7 +257,8 @@ implement the Cloud Foundry API.
 [Warden](https://github.com/cloudfoundry/vcap/tree/master/warden) is the
 security subsystem. It manages Linux containers, including their creation,
 destruction and monitoring. It can be thought of as a delicious layer of Ruby
-on top of a bit of C which uses Linux kernel hooks.
+on top of a bit of C which uses Linux kernel hooks to strictly enforce resource
+limits.
 
 ## Community
 
