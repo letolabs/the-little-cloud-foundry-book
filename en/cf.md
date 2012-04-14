@@ -39,7 +39,6 @@ Leto Labs LLC
 
 ...
 
-
 ### Latest Version
 
 The latest source of this book is available at:
@@ -84,25 +83,28 @@ still largely in flux.
         Infrastructure-as-a-service
         ---------------------------
 
-While there are many different definitions of PaaS floating around the market
-currently, there are a few functions that are specifically the task of PaaS:
- * live deploying web application code 
- * allocating server resources dynamically
- * server monitoring 
- * sending http requests to IaaS servers (this needs work)
+While there are many different murky definitions of PaaS floating around the market
+currently, there are a few functions that are usually the task of PaaS:
+
+ * Deploying new code to your application
+ * Allocating application services + resources dynamically
+ * Application health monitoring
+ * Load balancing
 
 ## What is Cloud Foundry?
 
-The name "Cloud Foundry" can be used to refer to either the still beta
+The name "Cloud Foundry" can be used to refer to either the
 commercial VMware product at cloudfoundry.com or the Cloud Foundry Open Source
 Project. In this book, "Cloud Foundry" will always refer to the open source
-project, unless otherwise stated.
+project, unless otherwise noted.
 
 Cloud Foundry consists of a large amount of Ruby code along with a small amount
-of C and Shell scripts that run on top of Ubuntu LTS. The C code is used to 
-manage Linux containers at the kernel level using a similar strategy as the
-Linux kernel user space program "lxc". CF also consists of many configuration
-files in YAML format.
+of C, and shell scripts that run on top of Ubuntu LTS. The C code (Warden)
+is used to manage Linux containers at the kernel level using a similar strategy
+as the Linux kernel user space program "lxc". CF also consists of many
+configuration files in YAML format.
+
+The vmc client is written in Ruby and speaks JSON to a Cloud Foundry HTTP endpoint.
 
 ## Features
 
@@ -111,10 +113,12 @@ files in YAML format.
 Supported languages in mainline:
 
 * Ruby (MRE 1.8.x, MRE 1.9.x, JRuby)
-* Java
+* Python
+* PHP
 * NodeJS 0.4.x, 0.6.x
 * PHP 5.3, 5.4 (ActiveState, AppFog, paas.io)
 * Erlang
+* Java
 
 Supported languages in forks:
 
@@ -479,5 +483,7 @@ instances on a "host" Linux server.
 <http://cloudfoundry.org> - VMware Cloud Foundry community website
 
 <https://github.com/cloudfoundry> - Cloud Foundry Github Organization
+
+<https://github.com/cloudfoundry/oss-docs> Cloud Foundry OSS Docs
 
 <http://apidocs.cloudfoundry.com> - Community API Docs
