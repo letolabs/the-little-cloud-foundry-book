@@ -3,8 +3,6 @@
 
 # The Little Cloud Foundry Book
 
-![cloud](cloud_small.jpg)\
-
 By Jonathan "Duke" Leto
 
 \clearpage
@@ -61,6 +59,9 @@ can skip to the "Installation" chapter.
 
 Developers who are familiar with Cloud Foundry but want to know how to contribute
 can skip to "Hacking on Cloud Foundry".
+
+\clearpage
+\changepage{}{}{}{1.5cm}{}{-2cm}{}{}{}
 
 ## Introduction
 
