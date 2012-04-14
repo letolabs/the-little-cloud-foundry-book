@@ -45,6 +45,9 @@ The latest source of this book is available at:
 
 \clearpage
 
+\thispagestyle{empty}
+\changepage{}{}{}{-1.5cm}{}{2cm}{}{}{}
+
 ## Who Is This Book For?
 
 This book is for three sets of people:
@@ -280,13 +283,16 @@ mirror roughly monthly which greatly increases the likelihood of merge
 conflicts. Many pull requests were greatfully merged, but the waves of code
 would not stop.
 
-o the delight of many, a public Gerrit instance was recently announced. This
+To the delight of many, a public Gerrit instance was recently announced. This
 allows internal VMware CF developers and external CF developers to work
 together, in public, which is a huge step in the right direction for VMware.
 http://reviews.cloudfoundry.org Developers can sign in with OpenID or a Google
 Account and participate in the development of Cloud Foundry.
 
-![CF Community Process](title_small.png)
+The following diagram is a rough outline of how the Cloud Foundry open source
+community works:
+
+![Cloud Foundry Community Process](title_medium.png)
 
 # Hacking on Cloud Foundry
 
@@ -351,19 +357,14 @@ TODO: brief breakdown of ql.io being ported to CF
 This case study utilizes Cloud Foundry to have a "private cloud" which is
 needed to keep HIPAA compliance in the health care industry.
 
-Load Balancer: AWS elastic load balancer
-
+ * Load Balancer: AWS elastic load balancer
  * Routers: 2 small instances (1.7 GB of RAM each)
-
  * DEA: 2 2xlarge instances (32 GB of RAM each), 1 xlarge instance (15 GB of RAM)
-
  * CC/HM/Nats: 1 xlarge instance (15 GB of RAM)
-
  * Database: AWS relational database service
-
  * Languages: Ruby , Node.js
-
  * Frameworks: Sinatra, Backbone.js
+
 
 ### NTT
 
