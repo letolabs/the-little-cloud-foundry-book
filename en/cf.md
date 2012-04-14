@@ -105,8 +105,15 @@ is used to manage Linux containers at the kernel level using a similar strategy
 as the Linux kernel user space program "lxc". CF also consists of many
 configuration files in YAML format.
 
-The vmc client is written in Ruby and speaks JSON to a Cloud Foundry HTTP endpoint.
+The vmc client is written in Ruby and speaks JSON to a Cloud Foundry-compatible
+HTTP endpoint.  It is at this layer which many companies are competing for your
+business. Thankfully, almost all have free for non-commercial use, academic,
+non-profit and other free tiers, so you can "test drive" their flavor of the
+cloud before forking over your money.
 
+A common misconception is that VMWare Cloud Foundry needs to be run on VMware
+infrastructure. That is not the case. While VMware vCloud is supported, Amazon
+(and compatible APIs) are also supported out of the box.  
 ## Features
 
 ### Supported Languages
@@ -119,7 +126,7 @@ Supported languages in mainline:
 * NodeJS 0.4.x, 0.6.x
 * PHP 5.3, 5.4 (ActiveState, AppFog, paas.io)
 * Erlang
-* Java
+* Java and JVM-based languages, such as Groovy
 
 Supported languages in forks:
 
@@ -156,7 +163,9 @@ Mainline:
 
 Forks:
 
-?
+Currently awaiting data.
+
+As for missing services in mainline, I would greatly like to see CouchDB supported.
 
 ## Deploying your App to a Cloud Foundry Instance
 
@@ -175,10 +184,12 @@ do that from the command line:
 
 ## How Do I Choose a Cloud Foundry Provider?
 
-This question depends on:
+This question depends on these questions in the following order:
 
  * Do you need complete privacy?
  * Do you want to DIY it or pay somebody else to worry?
+ * Which languages do I need supported?
+ * Do I need value-add services such as dynamic scaling?
 
 In theory, you can run Cloud Foundry on servers nested inside a Faraday cage in
 your basement.  You would have a totally isolated private cloud. The opposite
@@ -193,6 +204,26 @@ compliant, complete isolation and privacy is required. But if you are writing a
 social-networking web application, running in a shared cloud environment is
 perfectly reasonable.
 
+At this point, you will know if you need to be private or not-private. Now you
+will need to choose a provider that supports the set of languages that you
+want.  For instance, currently only ActiveState Stackato support Perl 5, so if
+you want to use Perl, your current only option is to run your own cloud or use
+Stackato.  On the other hand, both AppFog and Paas.io support PHP, so you could
+choose between either. New Cloud Foundry based startups and forks are being
+announced almost weekly, so the options are constantly changing.
+
+The last question to answer is the need for value-add services such as
+auto-scaling.  Auto-scaling is the process of the application being monitored
+and dynamically scaled as needed. For instance, usually your web app is fine
+with a single PostgreSQL database and a single web server. But then you get
+Slashdot'ed! (The author does not read Reddit). Auto-scaling would spin up as
+many slave read-only database servers, load balancers and web servers to handle
+the tsunami of traffic. When the traffic spike is over, auto-scaling reduces
+the number of servers to the needed amount. This process, if it works right,
+can greatly reduce costs, since you only need to pay for virtualized hardware
+when you actually need it. If you had to own the physical hardware to support
+your highest traffic spike, your resources would sit around unused most of the
+time.
 
 ## Installation
 
@@ -463,6 +494,11 @@ resources.
 
 VMware's Cloud Application Platform. This is the central Git repository which
 contains the Cloud Foundry codebase.
+
+### vcloud
+
+VMWare's IaaS which is comprised of various VMWare products together with a
+vCloud API.
 
 ### [vmc](https://github.com/cloudfoundry/vmc)
 
