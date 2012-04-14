@@ -33,7 +33,11 @@ Leto Labs LLC
 
 ### Thanks, Y'all
 
-...
+Many thanks to everybody that has contributed, but in particular
+
+* Leslie Hawthorn
+* Troy Howard
+* Ingy döt Net
 
 ### Latest Version
 

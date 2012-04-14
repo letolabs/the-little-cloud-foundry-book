@@ -1,3 +1,5 @@
+all: pdf epub
+
 view: pdf
 	evince cf.pdf
 
