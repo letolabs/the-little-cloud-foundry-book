@@ -345,31 +345,6 @@ There is a Cloud Foundry IRC channel on Freenode at #cloudfoundry. If you
 need help with Gerrit, there is also a very friendly community in #gerrit
 to help you.
 
-## Case Studies
-
-### ql.io
-
-TODO: brief breakdown of ql.io being ported to CF
-
-
-### CF multi-node using AWS
-
-This case study utilizes Cloud Foundry to have a "private cloud" which is
-needed to keep HIPAA compliance in the health care industry.
-
- * Load Balancer: AWS elastic load balancer
- * Routers: 2 small instances (1.7 GB of RAM each)
- * DEA: 2 2xlarge instances (32 GB of RAM each), 1 xlarge instance (15 GB of RAM)
- * CC/HM/Nats: 1 xlarge instance (15 GB of RAM)
- * Database: AWS relational database service
- * Languages: Ruby , Node.js
- * Frameworks: Sinatra, Backbone.js
-
-
-### NTT
-
-Contributed memcached pull request on Github, has large internal CF cloud.
-
 ## Glossary
 
 ### ACM
