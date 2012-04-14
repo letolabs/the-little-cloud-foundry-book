@@ -334,6 +334,12 @@ For a more detailed explanation of the contribution process, read the Open
 Source Developer
 [workflow](https://github.com/cloudfoundry/oss-docs/blob/master/workflow.md)
 
+One issue with this is that you need to sign away your intellectual property to
+VMWare when you sign their Contributor License Agreement. This leaves much to
+be desired and so an open source community fork called Cloud Free Style is
+being formed. You can join the newly-created mailing list at [here](http://groups.google.com/group/cloudfreestyle) .
+
+
 ## Running Tests
 
 All tests in Cloud Foundry are run with the Ruby `rake` tool.
@@ -504,6 +510,9 @@ thought of as a delicious layer of Ruby on top of a bit of C which uses Linux
 kernel hooks to strictly enforce resource limits and manage virtualized Linux
 instances on a "host" Linux server.
 
+\thispagestyle{empty}
+\clearpage
+
 ## Useful Links
 
 <http://rewews.cloudfoundry.org> - Public Gerrit for CF Contributions
@@ -517,3 +526,5 @@ instances on a "host" Linux server.
 <http://apidocs.cloudfoundry.com> - Community API Docs
 
 <http://github.com/Cloud-Apps> - A curated Gallery of web apps that run on one or more PaaS's.
+
+<http://groups.google.com/group/cloudfreestyle> - Cloud Free Style community fork mailing list
