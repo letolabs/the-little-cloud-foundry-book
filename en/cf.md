@@ -345,6 +345,17 @@ There is a Cloud Foundry IRC channel on Freenode at #cloudfoundry. If you
 need help with Gerrit, there is also a very friendly community in #gerrit
 to help you.
 
+# App Portability
+
+"App portability" is the concept that your application should be not locked
+into a single vendor. Your application should be portable in the sense that
+you can take it and run it on any PaaS provider of your choosing.
+
+To help this, Ingy has created a curated app gallery at
+https://github.com/Cloud-Apps .  The goal is to fork projects into this Github
+organization and then keep track of the changes necessary to get it to run on
+each Paas.
+
 ## Glossary
 
 ### ACM
