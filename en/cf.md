@@ -114,7 +114,8 @@ cloud before forking over your money.
 
 A common misconception is that VMWare Cloud Foundry needs to be run on VMware
 infrastructure. That is not the case. While VMware vCloud is supported, Amazon
-(and compatible APIs) are also supported out of the box.  
+(and compatible APIs) are also supported out of the box.
+
 ## Features
 
 ### Supported Languages
