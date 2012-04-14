@@ -339,7 +339,6 @@ VMWare when you sign their Contributor License Agreement. This leaves much to
 be desired and so an open source community fork called Cloud Free Style is
 being formed. You can join the newly-created mailing list at [here](http://groups.google.com/group/cloudfreestyle) .
 
-
 ## Running Tests
 
 All tests in Cloud Foundry are run with the Ruby `rake` tool.
@@ -360,10 +359,9 @@ to help you.
 into a single vendor. Your application should be portable in the sense that
 you can take it and run it on any PaaS provider of your choosing.
 
-To help this, Ingy has created a curated app gallery at
-https://github.com/Cloud-Apps .  The goal is to fork projects into this Github
-organization and then keep track of the changes necessary to get it to run on
-each Paas.
+To help this, Ingy has created a curated [app gallery](https://github.com/Cloud-Apps) on Github .
+The goal is to fork projects into this Github organization and then keep track
+of the changes necessary to get it to run on each Paas.
 
 ## Glossary
 
