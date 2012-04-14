@@ -153,12 +153,196 @@ Forks:
 
 ?
 
+## Deploying your App to a Cloud Foundry Instance
+
+If you just want to deploy apps to a Cloud Foundry instance, you just need to install
+a single Ruby gem called "vmc"
+
+    gem install vmc
+
+At this point you need to decide which Cloud Foundry based service to use. There are
+many. For now, if you want to register a free account at cloudfoundry.com, you can
+do that from the command line:
+
+    vmc register
+    vmc login
+    vmc info
+
+## How Do I Choose a Cloud Foundry Provider?
+
+This question depends on:
+
+ * Do you need complete privacy?
+ * Do you want to DIY it or pay somebody else to worry?
+
+In theory, you can run Cloud Foundry on servers nested inside a Faraday cage in
+your basement.  You would have a totally isolated private cloud. The opposite
+side of the spectrum is paying for Cloud Foundry, as a service. Since Cloud Foundry
+is IaaS-neutral, i.e. it doesn't care whether you run it on Amazon or some
+other infrastructure. Somewhere in the middle of this spectrum is running it
+on shared hosting, shared clouds, private clouds and hybrid clouds.
+
+If you, for instance, need to be HIPAA (Health Insurance Portability and
+Accountability Act) or PCI DSS (Payment Card Industry Data Security Standard)
+compliant, complete isolation and privacy is required. But if you are writing a
+social-networking web application, running in a shared cloud environment is
+perfectly reasonable.
+
+
+## Installation
+
+### Simplest
+
+ActiveState Stackato provides the easiest way to get a working Cloud Foundry
+instance running locally. There is a single, simple, beautiful command which
+takes care of everything, including creating a pristine VM:
+
+    curl get.stackato.com/microcloud | bash
+
+This should pop up a VM running inside virtualbox which has Stackato running!
+You can then connect to the web interface at TODO.
+
+### From Github
+
+On a 64bit Ubuntu LTS (10.04.2 works well) with at least 1GB RAM
+
+    sudo apt-get install openssh-server curl
+    bash < <(curl -s -k -B http://git.io/vcap_dev_setup)
+
+But alas, vcap_dev_setup does not actually start your local Cloud Foundry
+instance, to do that you must:
+
+    ~/cloudfoundry/vcap/dev_setup/bin/vcap_dev start
+
+To see the status of your local instance:
+
+    ~/cloudfoundry/vcap/dev_setup/bin/vcap_dev status
+
+To target vmc at your newly started local CF instance type:
+
+    vmc target api.vcap.me
+
+### Deploying Cloud Foundry Instances
+
+There is very good documenation in the the Cloud Foundry oss-docs repository
+about [single and multi node vcap
+deployments](https://github.com/cloudfoundry/oss-docs/tree/master/vcap/single_and_multi_node_deployments_with_dev_setup),
+so I will not repeat that here. There is also a very newly released tool
+called BOSH which can be used to manage one or many Cloud Foundry installations.
+But alas, this tool needs a book itself. Keep an eye out for the Little BOSH Book.
+
+## How To Contribute
+
+Many individuals and companies have contributed to Cloud Foundry to make it
+what it is today. Things that were added by the community include Python, PHP, Rack,
+JRuby, Erlang and many other features and services.
+
+In the past, VMware was overwhelmed with Github pull requests, so some of them
+went seemingly ignored.  This is explained by the fact that it was VMware's
+practice to sync from their private Gerrit repositories to their public Github
+mirror roughly monthly which greatly increases the likelihood of merge
+conflicts. Many pull requests were greatfully merged, but the waves of code
+would not stop.
+
+o the delight of many, a public Gerrit instance was recently announced. This
+allows internal VMware CF developers and external CF developers to work
+together, in public, which is a huge step in the right direction for VMware.
+http://reviews.cloudfoundry.org Developers can sign in with OpenID or a Google
+Account and participate in the development of Cloud Foundry.
+
+![CF Community Process](title_small.png)
+
+# Hacking on Cloud Foundry
+
+First, I highly encourage you to install the extremely handy Gerrit
+command-line gem :
+
+    gem install gerrit-cli
+
+You may need sudo if you are installing into your system gem location.
+Now, you should have a gerrit binary in your PATH and so you can use
+it to clone the central Cloud Foundry Git repository, "vcap" :
+
+    # USERNAME is your Gerrit username, which could be different
+    # than your local username
+    gerrit clone ssh://USERNAME@reviews.cloudfoundry.org:29418/vcap
+    # make some coffee, enjoy it, come back
+
+    # If you have RVM, it will ask if you trust the .rvmrc
+    cd vcap
+
+    git submodule update --init --recursive
+
+The last command above tells Git to recursively clone all the dependent
+repositories and "mount" them at the proper place in the directory structure.
+These dependent repos are vcap-services, vcap-tests, vcap-test-assets,
+vcap-java, acm and uaa. vcap-test-assets is a nested Git submodule, inside of
+vcap-tests.
+
+## Submitting Pull Requests
+
+Cloud Foundry does not accept pull requests on Github, it is used purely
+as a mirror, for "Github cruisers". All contributions need to be made on
+the public Gerrit at <http://reviews.cloudfoundry.org>.
+
+For a more detailed explanation of the contribution process, read the Open
+Source Developer
+[workflow](https://github.com/cloudfoundry/oss-docs/blob/master/workflow.md)
+
+## Running Tests
+
+All tests in Cloud Foundry are run with the Ruby `rake` tool.
+
+    rake spec         # Run specs
+    rake spec:rcov    # Run specs using RCov
+    rake tests        # Run integration tests.
+
+## Getting Help In Realtime-ish
+
+There is a Cloud Foundry IRC channel on Freenode at #cloudfoundry. If you
+need help with Gerrit, there is also a very friendly community in #gerrit
+to help you.
+
+## Case Studies
+
+### ql.io
+
+TODO: brief breakdown of ql.io being ported to CF
+
+
+### CF multi-node using AWS
+
+This case study utilizes Cloud Foundry to have a "private cloud" which is
+needed to keep HIPAA compliance in the health care industry.
+
+Load Balancer: AWS elastic load balancer
+
+ * Routers: 2 small instances (1.7 GB of RAM each)
+
+ * DEA: 2 2xlarge instances (32 GB of RAM each), 1 xlarge instance (15 GB of RAM)
+
+ * CC/HM/Nats: 1 xlarge instance (15 GB of RAM)
+
+ * Database: AWS relational database service
+
+ * Languages: Ruby , Node.js
+
+ * Frameworks: Sinatra, Backbone.js
+
+### NTT
+
+Contributed memcached pull request on Github, has large internal CF cloud.
+
 ## Glossary
 
 ### ACM
 
 Access Control Manager. A general system for implementing access control
 features for applications.
+
+### [BOSH](https://github.com/cloudfoundry/bosh)
+
+BOSH Outer SHell is an abstraction layer, between the Iaas and the Paas.
 
 ### caldecott
 
@@ -174,7 +358,7 @@ command similar to
 The Cloud Controller can be thought of as the maestro or orchestrator. It
 also includes the endpoints which vmc communicates with.
 
-### Chef
+### [chef](http://www.opscode.com/chef/)
 
 Chef is an open-source systems integration framework to automate cloud-related tasks.
 
@@ -192,7 +376,7 @@ development coming together, TODO: EXAMPLE.
 
 An application, along with all dependencies, in a compressed archive file.
 
-### Gerrit
+### [gerrit](https://code.google.com/p/gerrit/)
 
 A code review tool based on Git. Gerrit was originally written for the Android
 Open Source Project at Google and allows many kinds of complex requirements and
@@ -241,6 +425,16 @@ Google App Engine and many more.
 The Router takes HTTP requests and sends them to the appropriate running
 application instance.  It usually sits behind one or more load balancers.
 
+### [rvm](https://github.com/wayneeseguin/rvm)
+
+Ruby Version Manager. A utitity which makes it simple to manage many different
+versions of Ruby as well as isolating the dependencies on a per-project level.
+
+I highly recommend using rvm to isolate the Ruby that Cloud Foundry wants
+(currently 1.9.2-p180), versus what your system Ruby is, which you should most
+likely leave alone. RVM solves exactly the same problem as the virtualenv tool
+solves in Python as well as the perlbrew utiltiy for Perl 5.
+
 ### stager
 
 The stager takes an application, which is often a directory of files on disk, and
@@ -250,164 +444,40 @@ of an update or initial deploy.
 ### Ubuntu LTS
 
 Long-term supported releases of Ubuntu are supported for 2 years by Canonical.
+Currently it is the 12.04, which means 10.04, a widely-deployed version of Ubuntu,
+is recently unsupported.
 
-### UAA
+### [UAA](https://github.com/cloudfoundry/uaa)
 
 User Account and Authentication. UAA uses OpenID Connect for authentication
 (also known as Single Sign On) and the OAuth2 protocol for granting access to
 resources.
 
-### vcap
+### [vcap](https://github.com/cloudfoundry/vcap)
 
 VMware's Cloud Application Platform. This is the central Git repository which
 contains the Cloud Foundry codebase.
 
-### vmc
+### [vmc](https://github.com/cloudfoundry/vmc)
 
 Stands for "VMware Cloud" or "VMware controller" or whatever you want it to mean,
 really. It is a ruby gem which is the command-line client to endpoints which
 implement the Cloud Foundry API.
 
-### warden
+### [warden](https://github.com/cloudfoundry/vcap/tree/master/warden)
 
-[Warden](https://github.com/cloudfoundry/vcap/tree/master/warden) is the
-security subsystem. It manages Linux containers, including their creation,
-destruction and monitoring. It can be thought of as a delicious layer of Ruby
-on top of a bit of C which uses Linux kernel hooks to strictly enforce resource
-limits.
+Warden is the Cloud Foundry security and isolation subsystem. It manages Linux
+containers, including their creation, destruction and monitoring. It can be
+thought of as a delicious layer of Ruby on top of a bit of C which uses Linux
+kernel hooks to strictly enforce resource limits and manage virtualized Linux
+instances on a "host" Linux server.
 
+## Useful Links
 
-## Deploying your App to a Cloud Foundry Instance
+<http://rewews.cloudfoundry.org> - Public Gerrit for CF Contributions
 
-If you just want to deploy apps to a Cloud Foundry instance, you just need to install
-a single Ruby gem called "vmc"
+<http://cloudfoundry.org> - VMware Cloud Foundry community website
 
-    gem install vmc
+<https://github.com/cloudfoundry> - Cloud Foundry Github Organization
 
-At this point you need to decide which Cloud Foundry based service to use. There are
-many. For now, if you want to register a free account at cloudfoundry.com, you can
-do that from the command line:
-
-    vmc register --email your@email.com --passwd password
-
-
-    vmc login    --email your@email.com --passwd password
-    vmc info
-
-## How Do I Choose a Cloud Foundry Provider?
-
-This question depends on:
-
- * Do you need complete privacy?
- * Do you want to DIY it or pay somebody else to worry?
-
-In theory, you can run Cloud Foundry on servers nested inside a Faraday cage in
-your basement.  You would have a totally isolated private cloud. The opposite
-side of the spectrum is paying for Cloud Foundry, as a service. Since Cloud Foundry
-is IaaS-neutral, i.e. it doesn't care whether you run it on Amazon or some
-other infrastructure. Somewhere in the middle of this spectrum is running it
-on shared hosting, shared clouds, private clouds and hybrid clouds.
-
-If you, for instance, need to be HIPAA (Health Insurance Portability and
-Accountability Act) or PCI DSS (Payment Card Industry Data Security Standard)
-compliant, complete isolation and privacy is required. But if you are writing a
-social-networking web application, running in a shared cloud environment is
-perfectly reasonable.
-
-## Installing Cloud Foundry
-
-### Simplest
-
-ActiveState Stackato provides the easiest way to get a working Cloud Foundry
-instance running locally. There is a single, simple, beautiful command which
-takes care of everything, including creating a pristine VM:
-
-    curl get.stackato.com/microcloud | bash
-
-This should pop up a VM running inside virtualbox which has Stackato running!
-You can then connect to the web interface at TODO.
-
-### From Github
-
-On a 64bit Ubuntu LTS (10.04.2 works well) with at least 1GB RAM
-
-    sudo apt-get install openssh-server curl
-    bash < <(curl -s -k -B http://git.io/vcap_dev_setup)
-
-### Starting Cloud Foundry
-
-vcap_dev_setup does not actually start your local Cloud Foundry instance, to
-do that:
-
-    ~/cloudfoundry/vcap/dev_setup/bin/vcap_dev start
-
-To target vmc at your newly started local CF instance type:
-
-    vmc target api.vcap.me
-
-## How To Contribute
-
-Many individuals and companies have contributed to Cloud Foundry to make it
-what it is today. Things that were added by the community include Python, PHP, Rack,
-JRuby, Erlang and many other features and services.
-
-In the past, VMware was overwhelmed with Github pull requests, so some of them
-went seemingly ignored.  This is explained by the fact that it was VMware's
-practice to sync from their private Gerrit repositories to their public Github
-mirror roughly monthly which greatly increases the likelihood of merge
-conflicts. Many pull requests were greatfully merged, but the waves of code
-would not stop.
-
-o the delight of many, a public Gerrit instance was recently announced. This
-allows internal VMware CF developers and external CF developers to work
-together, in public, which is a huge step in the right direction for VMware.
-http://reviews.cloudfoundry.org Developers can sign in with OpenID or a Google
-Account and participate in the development of Cloud Foundry.
-
-![CF Community Process](title_small.png)
-
-To install the extremely handy Gerrit command-line gem :
-
-    gem install gerrit-cli
-
-You may need sudo if you are installing into your system gem location.
-
-There is a Cloud Foundry IRC channel on Freenode at #cloudfoundry.
-
-## Case Studies
-
-### ql.io
-
-TODO: brief breakdown of ql.io being ported to CF
-
-
-### CF multi-node using AWS
-
-This case study utilizes Cloud Foundry to have a "private cloud" which is
-needed to keep HIPAA compliance in the health care industry.
-
-Load Balancer: AWS elastic load balancer
-
- * Routers: 2 small instances (1.7 GB of RAM each)
-
- * DEA: 2 2xlarge instances (32 GB of RAM each), 1 xlarge instance (15 GB of RAM)
-
- * CC/HM/Nats: 1 xlarge instance (15 GB of RAM)
-
- * Database: AWS relational database service
-
- * Languages: Ruby , Node.js
-
- * Frameworks: Sinatra, Backbone.js
-
-### NTT
-
-Contributed memcached pull request on Github, has large internal CF cloud.
-
-## Links
-
-<http://cloudfoundry.org>
-
-<https://github.com/cloudfoundry>
-
-<http://apidocs.cloudfoundry.com>
+<http://apidocs.cloudfoundry.com> - Community API Docs
