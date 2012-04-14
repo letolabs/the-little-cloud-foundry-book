@@ -39,7 +39,7 @@ Leto Labs LLC
 
 The latest source of this book is available at:
 
-<http://github.com/letolabs/the-little-cloud-foundry-book>.
+<http://littlecf.github.com>
 
 \clearpage
 
