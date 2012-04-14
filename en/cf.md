@@ -526,3 +526,5 @@ instances on a "host" Linux server.
 <https://github.com/cloudfoundry/oss-docs> Cloud Foundry OSS Docs
 
 <http://apidocs.cloudfoundry.com> - Community API Docs
+
+<http://github.com/Cloud-Apps> - A curated Gallery of web apps that run on one or more PaaS's.
