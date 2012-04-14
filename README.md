@@ -33,6 +33,12 @@ More details at http://johnmacfarlane.net/pandoc/installing.html
 
     make pdf
 
+## Contributions
+
+Contributions are very much appreciated! Please fork this repo or send a Github
+Pull request. I will even take patches via email to duke@leto.net if you are
+really into that.
+
 # Author
 
 Jonathan "Duke" Leto
