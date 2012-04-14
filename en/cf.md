@@ -301,6 +301,19 @@ This question depends on:
  * Do you need complete privacy?
  * Do you want to DIY it or pay somebody else to worry?
 
+In theory, you can run Cloud Foundry on servers nested inside a Faraday cage in
+your basement.  You would have a totally isolated private cloud. The opposite
+side of the spectrum is paying for Cloud Foundry, as a service. Since Cloud Foundry
+is IaaS-neutral, i.e. it doesn't care whether you run it on Amazon or some
+other infrastructure. Somewhere in the middle of this spectrum is running it
+on shared hosting, shared clouds, private clouds and hybrid clouds.
+
+If you, for instance, need to be HIPAA (Health Insurance Portability and
+Accountability Act) or PCI DSS (Payment Card Industry Data Security Standard)
+compliant, complete isolation and privacy is required. But if you are writing a
+social-networking web application, running in a shared cloud environment is
+perfectly reasonable.
+
 ## Installing Cloud Foundry
 
 ### Simplest
@@ -328,28 +341,32 @@ do that:
 
     ~/cloudfoundry/vcap/dev_setup/bin/vcap_dev start
 
+To target vmc at your newly started local CF instance type:
+
+    vmc target api.vcap.me
 
 ## How To Contribute
 
 Many individuals and companies have contributed to Cloud Foundry to make it
-what it is today. Things that were added by the community include Python, PHP, Rack
-and many other features and services.
+what it is today. Things that were added by the community include Python, PHP, Rack,
+JRuby, Erlang and many other features and services.
 
 In the past, VMware was overwhelmed with Github pull requests, so some of them
 went seemingly ignored.  This is explained by the fact that it was VMware's
 practice to sync from their private Gerrit repositories to their public Github
 mirror roughly monthly which greatly increases the likelihood of merge
-conflicts.
+conflicts. Many pull requests were greatfully merged, but the waves of code
+would not stop.
 
-To the delight of many, a public Gerrit instance was recently announced. This will allow internal
-VMware CF developers and external CF developers to work together, in public,
-which is a huge step in the right direction for VMware.
+o the delight of many, a public Gerrit instance was recently announced. This
+allows internal VMware CF developers and external CF developers to work
+together, in public, which is a huge step in the right direction for VMware.
 http://reviews.cloudfoundry.org Developers can sign in with OpenID or a Google
 Account and participate in the development of Cloud Foundry.
 
 ![CF Community Process](title_small.png)
 
-To install the Gerrit command-line gem :
+To install the extremely handy Gerrit command-line gem :
 
     gem install gerrit-cli
 
@@ -366,8 +383,8 @@ TODO: brief breakdown of ql.io being ported to CF
 
 ### CF multi-node using AWS
 
-This case study utilizes Cloud Foundry to have a "private cloud" which is needed to keep
-HIPPA compliance in the health care industry.
+This case study utilizes Cloud Foundry to have a "private cloud" which is
+needed to keep HIPAA compliance in the health care industry.
 
 Load Balancer: AWS elastic load balancer
 
