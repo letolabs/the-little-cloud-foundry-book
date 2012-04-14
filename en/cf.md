@@ -346,7 +346,8 @@ features for applications.
 
 ### [BOSH](https://github.com/cloudfoundry/bosh)
 
-BOSH Outer SHell is an abstraction layer, between the Iaas and the Paas.
+BOSH Outer SHell is an abstraction layer, between the Iaas and the Paas. It has
+a pluggable architecture and currently supports Amazon and VMWare vCloud.
 
 ### caldecott
 
