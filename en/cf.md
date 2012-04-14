@@ -1,9 +1,7 @@
 \thispagestyle{empty}
 \changepage{}{}{}{-1.5cm}{}{2cm}{}{}{}
 
-# The Little Cloud Foundry Book
-
-By Jonathan "Duke" Leto
+![The Little Cloud Foundry Book](littlecf_logo.png)\
 
 \clearpage
 \changepage{}{}{}{1.5cm}{}{-2cm}{}{}{}
