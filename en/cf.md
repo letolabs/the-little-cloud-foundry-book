@@ -347,11 +347,6 @@ to help you.
 
 ## Case Studies
 
-### ql.io
-
-TODO: brief breakdown of ql.io being ported to CF
-
-
 ### CF multi-node using AWS
 
 This case study utilizes Cloud Foundry to have a "private cloud" which is
@@ -364,11 +359,6 @@ needed to keep HIPAA compliance in the health care industry.
  * Database: AWS relational database service
  * Languages: Ruby , Node.js
  * Frameworks: Sinatra, Backbone.js
-
-
-### NTT
-
-Contributed memcached pull request on Github, has large internal CF cloud.
 
 ## Glossary
 
